@@ -175,16 +175,16 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
                 Document doc = null;
                 try{
-                    //doc = Jsoup.connect("https://gall.dcinside.com/mgallery/board/lists/?id=bang_dream").get();
-                    doc = Jsoup.connect("https://gall.dcinside.com/mgallery/board/lists/?id=hoshikawa_hotaru").get();
-                    Elements posts_table = doc.select(".gall_list");
+                    //doc = Jsoup.connect("웹주소").get();
+                    doc = Jsoup.connect("웹주소").get();
+                    Elements posts_table = doc.select(".클래스명");
                     Elements posts = posts_table.select("tr");
 
                     for(int i = 1; i < posts.size(); i++) {
                         Element post = posts.get(i);
-                        //Element gall_num = post.select("td").get(1);
-                        Element gall_num = post.select("td").get(0);
-                        if (gall_num.text().equals("공지") || gall_num.text().equals("AD")) {
+                        //Element ㅁㅁ_num = post.select("td").get(1);
+                        Element ㅁㅁ_num = post.select("td").get(0);
+                        if (ㅁㅁ_num.text().equals("ㅇㅇ") || gall_num.text().equals("ㄷㄷ")) {
                             ;
                         } else {
                             last_no = post.select("td").get(0).text();
